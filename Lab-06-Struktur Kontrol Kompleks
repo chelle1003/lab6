@@ -1,0 +1,39 @@
+print("^^^^^    CETAK POLAMU    ^^^^^")
+print()
+print("Pilih pola mana yang ingin kamu gunakan")
+print("1.SEGITIGA")
+print("2.DIAMOND")
+pola=int(input("jadi pola mana yang ingin kamu cetak 1/2:"))
+if pola==1:
+    n=int(input("Masukkan panjang:"))
+    x=list(input("Masukkan karakter: "))
+    k=n-1
+    for i in range(n):
+       for j in range(0,k):
+           print(end= " ")
+       k=k-1
+       for j in range(0,i+1):
+           if j==0:
+               c=0
+           if c>=len(x):
+               c=0
+           print(x[c],end=" ")    
+           c=c+1
+       print()
+elif pola==2:
+    n=int(input("Masukkan panjang:"))
+    print()
+    for i in range(n):
+        for j in range(n,i,-1):
+            print(" ",end= "")
+        for j in range(2*i+1):
+            print("x",end="")
+        print()
+    for i in range(n-1,-1,-1):
+        for j in range(n,i,-1):
+            print(" ",end= "")
+        for j in range(2*i+1):
+            print("x",end="")
+        print()    
+else:
+    print("Maaf program ini hanya bisa mencetak 2 buah pola di pilihan saja!!!")
